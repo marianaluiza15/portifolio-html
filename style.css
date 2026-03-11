@@ -1,0 +1,55 @@
+#sobre{
+color: rgb(167, 167, 167);
+background-color: rgb(255, 255, 255);
+font-size: 20px;
+text-align: center;
+border: 2px solid black;
+padding: 10px;
+margin: 20px;
+}
+ 
+#habilidades{
+color: rgb(255, 255, 255);
+background-color: rgb(167, 167, 167);
+font-size: 20px;
+text-align: center;
+border: 2px solid black;
+padding: 10px;
+margin: 20px;
+}
+ 
+#projetos{
+color: rgb(167, 167, 167);
+background-color: rgb(255, 255, 255);
+font-size: 20px;
+text-align: center;
+border: 2px solid black;
+padding: 10px;
+margin: 20px;
+}
+ 
+#contato{
+color: rgb(255, 255, 255);
+background-color: rgb(167, 167, 167);
+font-size: 20px;
+text-align: center;
+border: 2px solid black;
+padding: 10px;
+margin: 20px;
+}
+
+.navegacao{
+    display:flex;
+    justify-content:center;
+}
+.navegacao ul{
+    display:flex;
+    gap:20px;
+    list-style:nome;
+}
+
+.navegacao a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
