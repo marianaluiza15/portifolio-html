@@ -2,30 +2,45 @@
 <html lang="pt-br">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mariana</title>
-<link rel="stylesheet"href="style.css">
 
 <style>
 
+    .caixa {
+  width: 200px;
+  height: 200px;
+  background-color: beige;
+  border: 3px solid #444;
+  border-radius: 40px;
+}
+
 body{
-background-color:#ffffff;
+background-color:#fcefda;
 font-family:Arial, sans-serif;
-margin:20px;
+margin:0;
+color:#3e3e3e;
+}
+
+/* HEADER */
+header{
+background-color:#f7daba;
+padding:20px;
+text-align:center;
 }
 
 h1{
-text-align:center;
-color:#464441;
+color:#5a4d41;
 }
 
 h2{
-color:#404137;
-text-align:center;
+color:#6b5e52;
 }
 
+/* NAV */
 nav ul{
 list-style:none;
 display:flex;
@@ -36,43 +51,164 @@ padding:0;
 
 nav a{
 text-decoration:none;
-color:black;
+color:#5a4d41;
 font-weight:bold;
 }
 
-a:hover{
-color:red;
+nav a:hover{
+color:#a1866f;
 }
 
+/* SEÇÕES */
 section{
-margin-top:40px;
-border-bottom:1px solid #000000;
-padding-bottom:20px;
+margin:20px;
+padding:20px;
 }
 
-img{
-width:200px;
+/* SOBRE */
+#sobre{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+background:#f7e1c4;
+padding:30px;
+border-radius:10px;
+flex-wrap:wrap;
+}
+
+#sobre img{
+width:240px;
+height:240px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+border:4px solid #e8dfd3;
+transition:0.3s;
+}
+
+#sobre img:hover{
+transform:scale(1.05);
+}
+
+.nome-destaque{
+font-size:26px;
+font-weight:bold;
+color:#5a4d41;
+} 
+
+#sobre div{
+max-width:500px;
+}
+
+#sobre h3{
+margin-top:0;
+color:#5a4d41;
+}
+
+/* HABILIDADES */
+#habilidades{
+background:#f7e1c4;
+padding:30px;
 border-radius:10px;
 }
 
+#habilidades ul{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+list-style:none;
+padding:0;
+justify-content:center;
+}
+
+#habilidades li{
+background:#f7e1c4;
+padding:12px 18px;
+border-radius:10px;
+font-weight:bold;
+transition:0.3s;
+border:1px solid #0a0600;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+#habilidades li:hover{
+background:#a1866f;
+color:white;
+transform:scale(1.05);
+}
+
+/* PROJETOS */
+.projetos-container{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.projeto{
+background:#f7e1c4;
+padding:20px;
+width:250px;
+border-radius:10px;
+text-align:center;
+border:2px solid #e0d6c8;
+transition:0.3s;
+}
+
+.projeto:hover{
+transform:scale(1.05);
+border-color:#a1866f;
+}
+
+/* CONTATO */
+#contato{
+background:#f7e1c4;
+padding:30px;
+border-radius:10px;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 margin-top:40px;
+background:#f7e1c4;
+padding:20px;
+color:#5a4d41;
+}
+
+/* BOTÃO TOPO */
+.topo{
+text-align:center;
+margin:30px;
+}
+
+.topo a{
+background:#f7e1c4;
+color:rgb(92, 67, 67);
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.topo a:hover{
+background:#a1866f;
 }
 
 </style>
 
 </head>
 
-<body>
+<body id="topo">
 
 <header>
 
 <h1>Mariana Luiza Afonso De Oliveira</h1>
-
 <h2>Cursando Informática</h2>
 
-<nav class="navegacao">
+<nav>
 <ul>
 <li><a href="#sobre">Sobre Mim</a></li>
 <li><a href="#habilidades">Habilidades</a></li>
@@ -87,18 +223,26 @@ margin-top:40px;
 
 <section id="sobre">
 
+<img src="https://avatars.githubusercontent.com/u/264007372?v=4" alt="Minha foto">
+
+<div>
 <h3>Sobre Mim</h3>
 
+<p class="nome-destaque">Mariana Luiza Afonso De Oliveira</p>
+
 <p>
-Sou estudante do curso técnico em Informática, atualmente cursando o terceiro módulo. Possuo conhecimentos básicos em montagem e manutenção de computadores, incluindo instalação e configuração de sistemas operacionais, formatação, limpeza preventiva e identificação de problemas simples de hardware e software.
-Sou uma pessoa dedicada, proativa e organizada, com facilidade para aprender e sempre buscando aprimorar meus conhecimentos na área de tecnologia.
+Sou estudante do curso técnico em Informática, atualmente cursando o terceiro módulo. Possuo conhecimentos básicos em montagem e manutenção de computadores, incluindo instalação e configuração de sistemas operacionais, formatação, limpeza preventiva e identificação de problemas de hardware e software.
 </p>
 
 <p>
-Atualmente estou em busca de uma oportunidade de estágio na área de informática, para ter meu primeiro contato com o mercado de trabalho e desenvolver na prática os conhecimentos adquiridos durante o curso. No futuro, pretendo cursar uma faculdade de Design e trabalhar em uma área que me permita unir criatividade e tecnologia.
+Além disso, tenho noções de desenvolvimento web utilizando HTML e estou em constante aprendizado para aprimorar minhas habilidades na área de tecnologia. Tenho facilidade para aprender coisas novas, sou organizada, dedicada e gosto de trabalhar em equipe.
 </p>
 
-<img src="https://avatars.githubusercontent.com/u/264007372?v=4">
+<p>
+Busco adquirir experiência prática e crescer profissionalmente, com o objetivo de no futuro atuar em uma área que envolva tecnologia e criatividade, como o Design ou desenvolvimento de interfaces.
+</p>
+
+</div>
 
 </section>
 
@@ -107,14 +251,17 @@ Atualmente estou em busca de uma oportunidade de estágio na área de informáti
 <h3>Minhas Habilidades</h3>
 
 <ul>
-<li>HTML</li>
-<li>Pacote Office</li>
-<li>Dashboard</li>
-<li>Inglês Intermediário</li>
-<li>Espanhol Básico</li>
-<li>Criatividade</li>
-<li>Trabalho em equipe</li>
-<li>Cooperatividade</li>
+<li><i class="fa-brands fa-html5"></i> HTML</li>
+<li><i class="fa-solid fa-file-word"></i> Pacote Office</li>
+<li><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+<li><i class="fa-solid fa-language"></i> Inglês Intermediário</li>
+<li><i class="fa-solid fa-language"></i> Espanhol Básico</li>
+<li><i class="fa-solid fa-lightbulb"></i> Criatividade</li>
+<li><i class="fa-solid fa-users"></i> Trabalho em equipe</li>
+<li><i class="fa-solid fa-handshake"></i> Cooperatividade</li>
+<li><i class="fa-solid fa-database"></i> Banco de Dados</li>
+<li><i class="fa-brands fa-python"></i> Python</li>
+<li><i class="fa-solid fa-robot"></i> Inteligência Artificial</li>
 </ul>
 
 </section>
@@ -123,33 +270,30 @@ Atualmente estou em busca de uma oportunidade de estágio na área de informáti
 
 <h3>Meus Projetos</h3>
 
+<div class="projetos-container">
+
+<div class="projeto">
 <h4>Manutenção de Computadores</h4>
+<p>Limpeza e diagnóstico de hardware e software.</p>
+</div>
 
-<p>
-Realizei manutenção de computadores, incluindo limpeza preventiva e identificação de problemas simples de hardware e software. Essa experiência me permitiu desenvolver habilidades técnicas e aprimorar minha capacidade de identificar e solucionar problemas relacionados a computadores.
-</p>
-
-<h5>Tecnologias Utilizadas:</h5>
-
-<ul>
-<li>Windows</li>
-<li>Diagnóstico de hardware</li>
-<li>Ferramentas de manutenção</li>
-</ul>
-
+<div class="projeto">
 <h4>Criação de Página Web</h4>
+<p>Desenvolvimento de site utilizando HTML.</p>
+</div>
 
-<p>
-Desenvolvimento de uma página web simples utilizando HTML, com o objetivo de apresentar informações pessoais e praticar a estruturação de sites.
-</p>
+<div class="projeto">
+<h4>Dashboard em Excel</h4>
+<p>Criação de dashboards para análise de dados utilizando Excel.</p>
+</div>
 
-<h5>Tecnologias Utilizadas:</h5>
+<div class="projeto">
+<h4>Instalação de Sistemas</h4>
+<p>Instalação e configuração de sistemas operacionais em computadores.</p>
+</div>
 
-<ul>
-<li>HTML</li>
-<li>VS Code</li>
-<li>Navegador Web</li>
-</ul>
+
+</div>
 
 </section>
 
@@ -159,22 +303,19 @@ Desenvolvimento de uma página web simples utilizando HTML, com o objetivo de ap
 
 <ul>
 
-<li>
-Email:
+<li>Email:
 <a href="mailto:mariana15luizaa@gmail.com">
 mariana15luizaa@gmail.com
 </a>
 </li>
 
-<li>
-Telefone:
+<li>Telefone:
 <a href="tel:+5522988455858">
 (22) 98845-5858
 </a>
 </li>
 
-<li>
-GitHub:
+<li>GitHub:
 <a href="https://github.com/marianaluiza15" target="_blank">
 Abrir GitHub
 </a>
@@ -190,9 +331,13 @@ Abrir GitHub
 
 <h5>Mariana Luiza Afonso de Oliveira</h5>
 <h5>2026</h5>
-<p>Mariana Luiza Afonso de Oliveira. 2026. Todos os direitos reservados.</p>
+<p>©Todos os direitos reservados.</p>
 
 </footer>
+
+<div class="topo">
+<a href="#topo">Voltar ao topo</a>
+</div>
 
 </body>
 </html>
