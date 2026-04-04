@@ -2,25 +2,20 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mariana</title>
 
-<style>
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    .caixa {
-  width: 200px;
-  height: 200px;
-  background-color: beige;
-  border: 3px solid #444;
-  border-radius: 40px;
-}
+<style>
 
 body{
 background-color:#fcefda;
-font-family:Arial, sans-serif;
+font-family:'Poppins', sans-serif;
 margin:0;
 color:#3e3e3e;
 }
@@ -34,10 +29,13 @@ text-align:center;
 
 h1{
 color:#5a4d41;
+font-weight:600;
 }
 
 h2{
 color:#6b5e52;
+text-align:center;
+font-weight:400;
 }
 
 /* NAV */
@@ -62,55 +60,64 @@ color:#a1866f;
 /* SEÇÕES */
 section{
 margin:20px;
-padding:20px;
-}
-
-/* SOBRE */
-#sobre{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:40px;
-background:#f7e1c4;
 padding:30px;
 border-radius:10px;
+}
+
+/* CORES DOS BLOCOS */
+#sobre{
+display:flex;
+align-items:stretch;
+justify-content:center;
+gap:40px;
 flex-wrap:wrap;
+background:transparent;
+}
+
+#habilidades{
+background:#f7e1c4;
+max-width:1000px;
+margin:20px auto;
+text-align:center;
+}
+
+#projetos{
+background:transparent;
+}
+
+#contato{
+background:transparent;
+text-align:center;
 }
 
 #sobre img{
-width:240px;
-height:240px;
+width:300px;
+height:auto;
+max-height:100%;
 object-fit:cover;
 border-radius:20px;
 box-shadow:0 8px 25px rgba(0,0,0,0.15);
 border:4px solid #e8dfd3;
-transition:0.3s;
 }
 
-#sobre img:hover{
-transform:scale(1.05);
+
+#sobre div{
+flex:1;
+display:flex;
+flex-direction:column;
+justify-content:center;
+max-width:500px;
 }
 
 .nome-destaque{
 font-size:26px;
 font-weight:bold;
 color:#5a4d41;
-} 
-
-#sobre div{
-max-width:500px;
 }
 
-#sobre h3{
-margin-top:0;
-color:#5a4d41;
-}
 
-/* HABILIDADES */
-#habilidades{
-background:#f7e1c4;
-padding:30px;
-border-radius:10px;
+h3{
+text-align:center;
 }
 
 #habilidades ul{
@@ -128,7 +135,7 @@ padding:12px 18px;
 border-radius:10px;
 font-weight:bold;
 transition:0.3s;
-border:1px solid #0a0600;
+border:2px solid black;
 display:flex;
 align-items:center;
 gap:8px;
@@ -138,6 +145,10 @@ gap:8px;
 background:#a1866f;
 color:white;
 transform:scale(1.05);
+}
+
+#habilidades i{
+color:#a1866f;
 }
 
 /* PROJETOS */
@@ -154,43 +165,49 @@ padding:20px;
 width:250px;
 border-radius:10px;
 text-align:center;
-border:2px solid #e0d6c8;
+border:2px solid black;
 transition:0.3s;
 }
 
 .projeto:hover{
+background:#a1866f;
+color:white;
 transform:scale(1.05);
-border-color:#a1866f;
 }
 
 /* CONTATO */
-#contato{
-background:#f7e1c4;
-padding:30px;
-border-radius:10px;
+#contato ul{
+list-style:none;
+padding:0;
 }
 
-/* FOOTER */
+/* FOOTER TRANSPARENTE */
 footer{
 text-align:center;
 margin-top:40px;
-background:#f7e1c4;
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
 padding:20px;
 color:#5a4d41;
+border-top:1px solid rgba(255,255,255,0.3);
+box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
 }
 
-/* BOTÃO TOPO */
+/* BOTÃO TOPO FIXO */
 .topo{
-text-align:center;
-margin:30px;
+position:fixed;
+right:20px;
+bottom:20px;
 }
 
 .topo a{
-background:#f7e1c4;
-color:rgb(92, 67, 67);
-padding:10px 20px;
+background:#5a4d41;
+color:white;
+padding:12px 15px;
+border-radius:50%;
 text-decoration:none;
-border-radius:5px;
+transition:0.3s;
 }
 
 .topo a:hover{
@@ -204,7 +221,6 @@ background:#a1866f;
 <body id="topo">
 
 <header>
-
 <h1>Mariana Luiza Afonso De Oliveira</h1>
 <h2>Cursando Informática</h2>
 
@@ -216,58 +232,50 @@ background:#a1866f;
 <li><a href="#contato">Contato</a></li>
 </ul>
 </nav>
-
 </header>
 
 <main>
 
 <section id="sobre">
-
 <img src="https://avatars.githubusercontent.com/u/264007372?v=4" alt="Minha foto">
 
 <div>
 <h3>Sobre Mim</h3>
 
-<p class="nome-destaque">Mariana Luiza Afonso De Oliveira</p>
-
 <p>
-Sou estudante do curso técnico em Informática, atualmente cursando o terceiro módulo. Possuo conhecimentos básicos em montagem e manutenção de computadores, incluindo instalação e configuração de sistemas operacionais, formatação, limpeza preventiva e identificação de problemas de hardware e software.
+Sou estudante do curso técnico em Informática, atualmente cursando o terceiro módulo. Possuo conhecimentos básicos em montagem e manutenção de computadores.
 </p>
 
 <p>
-Além disso, tenho noções de desenvolvimento web utilizando HTML e estou em constante aprendizado para aprimorar minhas habilidades na área de tecnologia. Tenho facilidade para aprender coisas novas, sou organizada, dedicada e gosto de trabalhar em equipe.
+Tenho noções de desenvolvimento web e estou sempre buscando aprender mais sobre tecnologia.
 </p>
 
 <p>
-Busco adquirir experiência prática e crescer profissionalmente, com o objetivo de no futuro atuar em uma área que envolva tecnologia e criatividade, como o Design ou desenvolvimento de interfaces.
+Meu objetivo é crescer profissionalmente e atuar em áreas que envolvam tecnologia e criatividade.
 </p>
-
 </div>
-
 </section>
 
 <section id="habilidades">
-
 <h3>Minhas Habilidades</h3>
 
 <ul>
 <li><i class="fa-brands fa-html5"></i> HTML</li>
 <li><i class="fa-solid fa-file-word"></i> Pacote Office</li>
 <li><i class="fa-solid fa-chart-line"></i> Dashboard</li>
-<li><i class="fa-solid fa-language"></i> Inglês Intermediário</li>
-<li><i class="fa-solid fa-language"></i> Espanhol Básico</li>
+<li><i class="fa-solid fa-language"></i> Inglês</li>
+<li><i class="fa-solid fa-language"></i> Espanhol</li>
 <li><i class="fa-solid fa-lightbulb"></i> Criatividade</li>
 <li><i class="fa-solid fa-users"></i> Trabalho em equipe</li>
 <li><i class="fa-solid fa-handshake"></i> Cooperatividade</li>
 <li><i class="fa-solid fa-database"></i> Banco de Dados</li>
 <li><i class="fa-brands fa-python"></i> Python</li>
-<li><i class="fa-solid fa-robot"></i> Inteligência Artificial</li>
+<li><i class="fa-solid fa-robot"></i> IA</li>
 </ul>
 
 </section>
 
 <section id="projetos">
-
 <h3>Meus Projetos</h3>
 
 <div class="projetos-container">
@@ -284,55 +292,33 @@ Busco adquirir experiência prática e crescer profissionalmente, com o objetivo
 
 <div class="projeto">
 <h4>Dashboard em Excel</h4>
-<p>Criação de dashboards para análise de dados utilizando Excel.</p>
+<p>Criação de dashboards para análise de dados.</p>
 </div>
 
 <div class="projeto">
 <h4>Instalação de Sistemas</h4>
-<p>Instalação e configuração de sistemas operacionais em computadores.</p>
+<p>Configuração de sistemas operacionais.</p>
 </div>
 
-
 </div>
-
 </section>
 
 <section id="contato">
-
 <h3>Contato</h3>
 
 <ul>
-
-<li>Email:
-<a href="mailto:mariana15luizaa@gmail.com">
-mariana15luizaa@gmail.com
-</a>
-</li>
-
-<li>Telefone:
-<a href="tel:+5522988455858">
-(22) 98845-5858
-</a>
-</li>
-
-<li>GitHub:
-<a href="https://github.com/marianaluiza15" target="_blank">
-Abrir GitHub
-</a>
-</li>
-
+<li>Email: <a href="mailto:mariana15luizaa@gmail.com">mariana15luizaa@gmail.com</a></li>
+<li>Telefone: <a href="tel:+5522988455858">(22) 98845-5858</a></li>
+<li>GitHub: <a href="https://github.com/marianaluiza15" target="_blank">Abrir GitHub</a></li>
 </ul>
-
 </section>
 
 </main>
 
 <footer>
-
 <h5>Mariana Luiza Afonso de Oliveira</h5>
 <h5>2026</h5>
-<p>©Todos os direitos reservados.</p>
-
+<p>© Todos os direitos reservados.</p>
 </footer>
 
 <div class="topo">
