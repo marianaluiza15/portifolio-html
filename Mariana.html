@@ -2,13 +2,12 @@
 <html lang="pt-br">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mariana</title>
 
-<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -20,7 +19,6 @@ margin:0;
 color:#3e3e3e;
 }
 
-/* HEADER */
 header{
 background-color:#f7daba;
 padding:20px;
@@ -38,7 +36,6 @@ text-align:center;
 font-weight:400;
 }
 
-/* NAV */
 nav ul{
 list-style:none;
 display:flex;
@@ -57,66 +54,33 @@ nav a:hover{
 color:#a1866f;
 }
 
-/* SEÇÕES */
 section{
 margin:20px;
 padding:30px;
 border-radius:10px;
 }
 
-/* CORES DOS BLOCOS */
 #sobre{
 display:flex;
-align-items:stretch;
+align-items:center;
 justify-content:center;
 gap:40px;
 flex-wrap:wrap;
-background:transparent;
-}
-
-#habilidades{
-background:#f7e1c4;
-max-width:1000px;
-margin:20px auto;
-text-align:center;
-}
-
-#projetos{
-background:transparent;
-}
-
-#contato{
-background:transparent;
-text-align:center;
 }
 
 #sobre img{
-width:300px;
-height:auto;
-max-height:100%;
-object-fit:cover;
+width:250px;
 border-radius:20px;
 box-shadow:0 8px 25px rgba(0,0,0,0.15);
 border:4px solid #e8dfd3;
 }
 
-
 #sobre div{
-flex:1;
-display:flex;
-flex-direction:column;
-justify-content:center;
 max-width:500px;
 }
 
-.nome-destaque{
-font-size:26px;
-font-weight:bold;
-color:#5a4d41;
-}
-
-
-h3{
+#habilidades{
+background:#f7e1c4;
 text-align:center;
 }
 
@@ -130,15 +94,14 @@ justify-content:center;
 }
 
 #habilidades li{
-background:#f7e1c4;
 padding:12px 18px;
 border-radius:10px;
 font-weight:bold;
-transition:0.3s;
 border:2px solid black;
 display:flex;
 align-items:center;
 gap:8px;
+transition:0.3s;
 }
 
 #habilidades li:hover{
@@ -147,11 +110,6 @@ color:white;
 transform:scale(1.05);
 }
 
-#habilidades i{
-color:#a1866f;
-}
-
-/* PROJETOS */
 .projetos-container{
 display:flex;
 gap:20px;
@@ -175,47 +133,70 @@ color:white;
 transform:scale(1.05);
 }
 
-/* CONTATO */
+.img-projeto{
+width:100%;
+height:110px;
+object-fit:cover;
+border-radius:8px;
+display:block;
+margin-bottom:10px;
+}
+
+#contato{
+text-align:center;
+}
+
 #contato ul{
 list-style:none;
 padding:0;
 }
 
-/* FOOTER TRANSPARENTE */
 footer{
 text-align:center;
 margin-top:40px;
-background: rgba(255, 255, 255, 0.15);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
+background:#f7e1c4;
 padding:20px;
-color:#5a4d41;
-border-top:1px solid rgba(255,255,255,0.3);
-box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
 }
 
-/* BOTÃO TOPO FIXO */
 .topo{
 position:fixed;
 right:20px;
 bottom:20px;
+opacity:0;
+pointer-events:none;
+transform:translateY(20px);
+transition:0.3s;
+}
+
+.topo.ativo{
+opacity:1;
+pointer-events:auto;
+transform:translateY(0);
 }
 
 .topo a{
 background:#5a4d41;
 color:white;
-padding:12px 15px;
-border-radius:50%;
+padding:12px 20px;
+border-radius:30px;
 text-decoration:none;
-transition:0.3s;
+display:flex;
+align-items:center;
+gap:8px;
 }
 
-.topo a:hover{
-background:#a1866f;
+@media (max-width:768px){
+#sobre{
+flex-direction:column;
+text-align:center;
+}
+
+#sobre img{
+width:200px;
+}
 }
 
 </style>
-
 </head>
 
 <body id="topo">
@@ -237,22 +218,13 @@ background:#a1866f;
 <main>
 
 <section id="sobre">
-<img src="https://avatars.githubusercontent.com/u/264007372?v=4" alt="Minha foto">
+<img src="https://avatars.githubusercontent.com/u/264007372?v=4">
 
 <div>
 <h3>Sobre Mim</h3>
-
-<p>
-Sou estudante do curso técnico em Informática, atualmente cursando o terceiro módulo. Possuo conhecimentos básicos em montagem e manutenção de computadores.
-</p>
-
-<p>
-Tenho noções de desenvolvimento web e estou sempre buscando aprender mais sobre tecnologia.
-</p>
-
-<p>
-Meu objetivo é crescer profissionalmente e atuar em áreas que envolvam tecnologia e criatividade.
-</p>
+<p>Sou estudante do curso técnico em Informática, atualmente cursando o terceiro módulo.</p>
+<p>Tenho noções de desenvolvimento web e busco aprender mais sobre tecnologia.</p>
+<p>Meu objetivo é crescer profissionalmente na área de tecnologia.</p>
 </div>
 </section>
 
@@ -267,7 +239,6 @@ Meu objetivo é crescer profissionalmente e atuar em áreas que envolvam tecnolo
 <li><i class="fa-solid fa-language"></i> Espanhol</li>
 <li><i class="fa-solid fa-lightbulb"></i> Criatividade</li>
 <li><i class="fa-solid fa-users"></i> Trabalho em equipe</li>
-<li><i class="fa-solid fa-handshake"></i> Cooperatividade</li>
 <li><i class="fa-solid fa-database"></i> Banco de Dados</li>
 <li><i class="fa-brands fa-python"></i> Python</li>
 <li><i class="fa-solid fa-robot"></i> IA</li>
@@ -281,21 +252,25 @@ Meu objetivo é crescer profissionalmente e atuar em áreas que envolvam tecnolo
 <div class="projetos-container">
 
 <div class="projeto">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_KbgMoFfm7lit-GAEv4CndyajnrOoYTLbQ&s" class="img-projeto">
 <h4>Manutenção de Computadores</h4>
 <p>Limpeza e diagnóstico de hardware e software.</p>
 </div>
 
 <div class="projeto">
+<img src="https://hotmart.com/media/2023/02/Como-criar-uma-pagina-na-internet.webp" class="img-projeto">
 <h4>Criação de Página Web</h4>
 <p>Desenvolvimento de site utilizando HTML.</p>
 </div>
 
 <div class="projeto">
+<img src="data:image/png;base64,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" class="img-projeto">
 <h4>Dashboard em Excel</h4>
 <p>Criação de dashboards para análise de dados.</p>
 </div>
 
 <div class="projeto">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6Fra9P1NVfBri7oMUjUSBgQSS9vjQJJ0cA&s" class="img-projeto">
 <h4>Instalação de Sistemas</h4>
 <p>Configuração de sistemas operacionais.</p>
 </div>
@@ -322,8 +297,22 @@ Meu objetivo é crescer profissionalmente e atuar em áreas que envolvam tecnolo
 </footer>
 
 <div class="topo">
-<a href="#topo">Voltar ao topo</a>
+<a href="#topo">
+<i class="fa-solid fa-arrow-up"></i> Topo
+</a>
 </div>
+
+<script>
+window.addEventListener("scroll", function(){
+  let botao = document.querySelector(".topo");
+
+  if(window.scrollY > 150){
+    botao.classList.add("ativo");
+  } else {
+    botao.classList.remove("ativo");
+  }
+});
+</script>
 
 </body>
 </html>
