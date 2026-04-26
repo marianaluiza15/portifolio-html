@@ -188,3 +188,167 @@ text-align:center;
 width:200px;
 }
 }
+
+.dark{
+  background-color:#1e1e1e;
+  color:#f5f5f5;
+}
+
+.dark header{
+  background:#2a2a2a;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark p,
+.dark a{
+  color:#f5f5f5;
+}
+
+.dark nav a{
+  color:#f5f5f5;
+}
+
+.dark nav a:hover{
+  color:#c2a98d;
+}
+
+.dark section{
+  background:#2a2a2a;
+}
+
+.dark #habilidades{
+  background:#2a2a2a;
+}
+
+.dark #habilidades li{
+  border-color:#555;
+}
+
+.dark .projeto{
+  background:#333;
+  border-color:#555;
+}
+
+.dark .projeto:hover{
+  background:#555;
+}
+
+.dark footer{
+  background:#2a2a2a;
+}
+
+.dark-btn{
+  margin-top:10px;
+  padding:10px 15px;
+  border:none;
+  border-radius:8px;
+  background:#5a4d41;
+  color:white;
+  cursor:pointer;
+}
+
+.dark-btn:hover{
+  background:#3e3e3e;
+}
+
+
+@media (max-width:768px){
+
+  header{
+    padding:15px;
+  }
+
+  h1{
+    font-size:20px;
+  }
+
+  h2{
+    font-size:14px;
+  }
+
+  nav ul{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  #sobre{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+  }
+
+  #sobre img{
+    width:180px;
+  }
+
+  #habilidades ul{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  #habilidades li{
+    width:80%;
+    justify-content:center;
+  }
+
+  .projetos-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .projeto{
+    width:90%;
+  }
+
+  .img-projeto{
+    height:150px;
+  }
+
+  #contato ul{
+    padding:0 10px;
+  }
+
+  .topo{
+    right:10px;
+    bottom:10px;
+  }
+
+  .topo a{
+    padding:10px 15px;
+    font-size:14px;
+  }
+
+  .dark-btn{
+    width:90%;
+    margin-top:15px;
+  }
+}
+
+.topo{
+position:fixed;
+right:20px;
+bottom:20px;
+opacity:0;
+pointer-events:none;
+transform:translateY(20px);
+transition:0.3s;
+}
+
+.topo.ativo{
+opacity:1;
+pointer-events:auto;
+transform:translateY(0);
+}
+
+.topo a{
+background:#5a4d41;
+color:white;
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:8px;
+}
